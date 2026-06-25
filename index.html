@@ -1,97 +1,282 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Digital Document System (DDS)</title>
-    <style>
-        body {
-            font-family: Arial;
-            max-width: 1000px;
-            margin: auto;
-            padding: 30px;
-            background: #f5f7fa;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        h1 {
-            color: #0F4C81;
-        }
+<title>Digital Document System</title>
 
-        .button {
-            background: #0F4C81;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
+<style>
 
-        .box {
-            background: white;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
-    </style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background: #f5f7fa;
+    color: #333;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(to right, #0F4C81, #1b6bb3);
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.button {
+    display: inline-block;
+    background: white;
+    color: #0F4C81;
+    padding: 12px 25px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #e8eef5;
+}
+
+.box {
+    background: white;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.box h3 {
+    color: #0F4C81;
+}
+
+.banner {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.workflow {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.screenshots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.screenshots img {
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.feature {
+    flex: 1;
+    min-width: 250px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid #0F4C81;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: #666;
+}
+
+@media screen and (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .screenshots img {
+        width: 100%;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
 
-<h1>Digital Document System</h1>
+<div class="hero">
 
-<h2>Organize. Index. Retrieve.</h2>
+    <h1>Document Digital System</h1>
 
-<p>
-A practical digital document management system
-for businesses handling large amounts of paperwork.
-</p>
-<img src="DMS - E.png" width="1000">
-<div class="box">
-<h3>Key Features</h3>
+    <h2>Find Documents in Seconds</h2>
 
-<ul>
-<li>Capture paper documents</li>
-<li>Organize and index files</li>
-<li>Store digitally</li>
-<li>Retrieve instantly</li>
-</ul>
-<img src="DMS flow.png" width="900">
-</div>
-
-<div class="box">
-
-<h3>Industries</h3>
-
-<ul>
-<li>Logistics</li>
-<li>Freight Forwarding</li>
-<li>Accounting</li>
-<li>Property Management</li>
-<li>Construction</li>
-</ul>
-
-</div>
-
-<p>
-<br>
-<a href="mailto:mingkeepaper@gmail.com"
-class="button">
-Request Demo
-</a>
     <p>
-<br>
-<a href="DMS.pdf" class="button">
-Download Brochure
-</a>
-    
-    
-<h3>Screenshots</h3>
-    <ul>
-        <img src="Indexer.jpg" width="300">
-        <br>
-                <img src="Retrieval.jpg" width="300">
-            <br>
-        <img src="DocViewer.jpg" width="300">
-    </ul>
-    
+        A practical digital document management system designed for businesses
+        handling large amounts of paperwork.
+    </p>
+
+    <a href="mailto:mingkeepaper@gmail.com" class="button">
+        Request Demo
+    </a>
+
+    <a href="DMS.pdf" class="button">
+        Download Brochure
+    </a>
+
+</div>
+
+<img src="DMS - E.png" class="banner">
+
+<div class="box">
+
+<h3>Why Choose DocDex?</h3>
+
+<div class="features">
+
+<div class="feature">
+<h4>Capture</h4>
+<p>Scan and digitize paper documents.</p>
+</div>
+
+<div class="feature">
+<h4>Organize</h4>
+<p>Index documents for fast and accurate searching.</p>
+</div>
+
+<div class="feature">
+<h4>Retrieve</h4>
+<p>Find documents instantly whenever needed.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="box">
+
+<h3>How It Works</h3>
+
+<img src="DMS flow.png" class="workflow">
+
+</div>
+
+<div class="box">
+
+<h3>Business Benefits</h3>
+
+<ul>
+<li>Save time locating documents</li>
+<li>Reduce paper clutter</li>
+<li>Improve staff productivity</li>
+<li>Respond to customers faster</li>
+<li>Retrieve invoices, agreements and records instantly</li>
+<li>Reduce dependency on physical filing cabinets</li>
+</ul>
+
+</div>
+
+<div class="box">
+
+<h3>Perfect For</h3>
+
+<ul>
+<li>Freight Forwarding</li>
+<li>Logistics Companies</li>
+<li>Haulage Operators</li>
+<li>Accounting Firms</li>
+<li>Property Management Companies</li>
+<li>Construction Companies</li>
+<li>Legal Firms</li>
+<li>Any business handling large amounts of paperwork</li>
+</ul>
+
+</div>
+
+<div class="box">
+
+<h3>Logistics & Freight Forwarding Example</h3>
+
+<p>
+
+Need a Proof of Delivery (POD) from 6 months ago?
+
+Need a Delivery Order to resolve a customer dispute?
+
+Instead of searching through boxes and filing cabinets,
+DocDex allows staff to retrieve shipment documents within seconds.
+
 </p>
+
+</div>
+
+<div class="box">
+
+<h3>Software Screenshots</h3>
+
+<div class="screenshots">
+
+<img src="Indexer.jpg" alt="Indexer">
+
+<img src="Retrieval.jpg" alt="Retrieval">
+
+<img src="DocViewer.jpg" alt="Document Viewer">
+
+</div>
+
+</div>
+
+<div class="footer">
+
+<hr>
+
+<h3>DocDex</h3>
+
+<p>
+Organize. Index. Retrieve.
+</p>
+
+<p>
+📧 <a href="mailto:mingkeepaper@gmail.com">
+mingkeepaper@gmail.com
+</a>
+</p>
+
+<p>
+© 2026 Digital Document System
+</p>
+
+</div>
 
 </body>
 </html>
