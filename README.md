@@ -80,7 +80,7 @@ Locate any document within seconds using fast and flexible search capabilities.
 
 ---
 
-## Why Choose DocDex?
+## Why Choose DDS?
 
 - Save time searching for documents
 - Reduce paper clutter
@@ -106,4 +106,4 @@ https://digitaldocsys.github.io/DDS/
 
 ---
 
-© 2026 DocDex
+© 2026 DDS
