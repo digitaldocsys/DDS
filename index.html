@@ -15,7 +15,7 @@ content="Digital Document System helps businesses organize, index and retrieve P
   gtag('config', 'G-WDVW8XEK71');
 </script>
 
- <script type="text/javascript">
+<script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -30,6 +30,98 @@ content="Digital Document System helps businesses organize, index and retrieve P
 
 <style>
 
+/* Floating WhatsApp */
+
+.whatsapp-container{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    z-index:9999;
+}
+
+.whatsapp-label{
+
+    background:#ffffff;
+    color:#0F4C81;
+    padding:10px 18px;
+    border-radius:30px;
+    font-weight:bold;
+    font-size:16px;
+    text-decoration:none;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.25);
+
+    animation:pulse 2s infinite;
+    transition:.3s;
+}
+
+.whatsapp-label:hover{
+    background:#0F4C81;
+    color:white;
+}
+
+.whatsapp-float{
+    width:65px;
+    height:65px;
+    background:#25D366;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+.whatsapp-float:hover{
+    transform:scale(1.08);
+}
+
+.whatsapp-float img{
+    width:38px;
+}
+
+@keyframes pulse{
+
+0%{
+    transform:scale(1);
+}
+
+50%{
+    transform:scale(1.05);
+}
+
+100%{
+    transform:scale(1);
+}
+
+}
+
+@media(max-width:768px){
+
+.whatsapp-container{
+    bottom:18px;
+    right:18px;
+}
+
+.whatsapp-label{
+    font-size:14px;
+    padding:8px 14px;
+}
+
+.whatsapp-float{
+    width:58px;
+    height:58px;
+}
+
+.whatsapp-float img{
+    width:34px;
+}
+
+}
+  
 body {
     font-family: Arial, Helvetica, sans-serif;
     max-width: 1200px;
@@ -298,5 +390,30 @@ mingkeepaper@gmail.com
 
 </div>
 
+<div class="whatsapp-container">
+
+<a class="whatsapp-label"
+href="https://wa.me/60193537382?text=Hi%20K.H%20Yong,%20I%20am%20interested%20in%20your%20Digital%20Document%20System."
+target="_blank"
+onclick="gtag('event','whatsapp_click');">
+
+💬 Chat with Us
+
+</a>
+
+<a class="whatsapp-float"
+href="https://wa.me/60193537382?text=Hi%20K.H%20Yong,%20I%20am%20interested%20in%20your%20Digital%20Document%20System."
+target="_blank"
+onclick="gtag('event','whatsapp_click',{
+    event_category:'Contact',
+    event_label:'Floating WhatsApp Button'
+});">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+
+</a>
+
+</div>
+  
 </body>
 </html>
