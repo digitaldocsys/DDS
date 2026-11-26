@@ -244,6 +244,87 @@ body {
 
 }
 
+
+/* Request Demo Popup */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.modal-content {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+}
+
+.modal-content h2 {
+    color: #0F4C81;
+    margin-top: 0;
+}
+
+.modal-content label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.modal-content textarea {
+    resize: vertical;
+}
+
+.modal-submit {
+    width: 100%;
+    background: #0F4C81;
+    color: white;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-submit:hover {
+    background: #1b6bb3;
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 28px;
+    color: #666;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+  
 </style>
 </head>
 
@@ -259,11 +340,14 @@ body {
  Organize your existing PDF and image documents, index them with meaningful information, and retrieve any document in seconds.
     </p>
 
-<a href="mailto:mingkeepaper@gmail.com"
+
+<button type="button"
 class="button"
-onclick="gtag('event','request_demo');">
-        Request Demo
-    </a>
+onclick="openDemoForm(); gtag('event','request_demo');"
+style="border:none; cursor:pointer; font-size:16px;">
+    Request Demo
+</button>
+
 
 <a href="DMS.pdf"
 class="button"
@@ -414,7 +498,7 @@ onclick="gtag('event','whatsapp_click');">
 </a>
 
 <a class="whatsapp-float"
-href="https://wa.me/60193537382?text=Hi%20K.H%20Yong,%20I%20am%20interested%20in%20your%20Digital%20Document%20System."
+href="https://wa.me/60162467144?text=Hi%20K.H%20Yong,%20I%20am%20interested%20in%20your%20Digital%20Document%20System."
 target="_blank"
 onclick="gtag('event','whatsapp_click',{
     event_category:'Contact',
@@ -426,6 +510,104 @@ onclick="gtag('event','whatsapp_click',{
 </a>
 
 </div>
+
+
+<!-- Request Demo Enquiry Form -->
+
+<div id="demoModal" class="modal">
+
+    <div class="modal-content">
+
+        <button type="button" class="modal-close"
+        onclick="closeDemoForm()"
+        aria-label="Close">&times;</button>
+
+        <h2>Request a Free Demo</h2>
+
+        <p>Please complete the form below.
+        We'll get in touch with you shortly.</p>
+
+        <form action="https://formsubmit.co/mingkeepaper@gmail.com"
+        method="POST">
+
+            <input type="hidden" name="_subject"
+            value="New DDS Website - Demo Enquiry">
+
+            <input type="hidden" name="_template"
+            value="table">
+
+            <!-- Spam protection -->
+            <input type="text" name="_honey"
+            style="display:none" tabindex="-1"
+            autocomplete="off">
+
+            <label for="demoName">Full Name *</label>
+            <input type="text" id="demoName"
+            name="Name" required>
+
+            <label for="demoCompany">Company Name *</label>
+            <input type="text" id="demoCompany"
+            name="Company" required>
+
+            <label for="demoEmail">Email Address *</label>
+            <input type="email" id="demoEmail"
+            name="email" required>
+
+            <label for="demoPhone">Contact Number</label>
+            <input type="tel" id="demoPhone"
+            name="Contact Number">
+
+            <label for="demoMessage">Message</label>
+            <textarea id="demoMessage"
+            name="Message" rows="4"
+            placeholder="Tell us a little about your requirements..."></textarea>
+
+            <button type="submit" class="modal-submit"
+            onclick="gtag('event','request_demo_submit');">
+                Submit Enquiry
+            </button>
+
+            <p style="font-size:12px;color:#777;">
+                Your information will be used only to
+                respond to your enquiry.
+            </p>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script>
+
+// Open enquiry form
+function openDemoForm() {
+    document.getElementById("demoModal").style.display = "flex";
+}
+
+// Close enquiry form
+function closeDemoForm() {
+    document.getElementById("demoModal").style.display = "none";
+}
+
+// Close when clicking outside the form
+window.onclick = function(event) {
+    const modal = document.getElementById("demoModal");
+
+    if (event.target === modal) {
+        closeDemoForm();
+    }
+};
+
+// Close with Escape key
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        closeDemoForm();
+    }
+});
+
+</script>
+
   
 </body>
 </html>
